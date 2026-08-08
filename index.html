@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dumb Manjiri 💗</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    .float {
+      animation: float 2.5s ease-in-out infinite;
+    }
+  </style>
+</head>
+
+<body class="h-screen overflow-hidden bg-gradient-to-br from-pink-500 via-rose-500 to-purple-600 flex items-center justify-center p-3">
+
+  <!-- Small floating hearts -->
+  <div class="fixed top-5 left-5 text-xl float">💗</div>
+  <div class="fixed top-10 right-6 text-lg float">💕</div>
+  <div class="fixed bottom-5 left-7 text-lg float">💘</div>
+  <div class="fixed bottom-8 right-8 text-xl float">❤️</div>
+
+  <main class="w-full max-w-sm">
+
+    <div class="bg-white rounded-3xl shadow-2xl px-5 py-4">
+
+      <!-- Header -->
+      <div class="text-center">
+
+        <div class="text-3xl float">🧠</div>
+
+        <h1 class="text-4xl font-black leading-none text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">
+          DUMB
+        </h1>
+
+        <h2 class="text-3xl font-black leading-none text-gray-800">
+          MANJIRI
+        </h2>
+
+        <p class="text-xs text-gray-500 mt-1">
+          Let's see if your one brain cell is awake 😭
+        </p>
+
+        <p class="text-xs text-pink-500 font-bold">
+          Love you though ❤️
+        </p>
+
+      </div>
+
+      <!-- Difficulty -->
+      <div class="mt-3">
+
+        <label class="text-xs font-bold text-gray-600">
+          Choose your difficulty, genius 🤓
+        </label>
+
+        <select
+          id="difficulty"
+          class="w-full mt-1 rounded-xl border-2 border-pink-100 bg-pink-50 px-3 py-2 text-sm font-semibold outline-none focus:border-pink-400"
+        >
+          <option value="easy">Baby Mode 👶 — 1 to 50</option>
+          <option value="medium" selected>Manjiri Mode 🤡 — 1 to 100</option>
+          <option value="hard">Big Brain Mode 🧠 — 1 to 500</option>
+        </select>
+
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-2 gap-2 mt-3">
+
+        <div class="rounded-xl bg-pink-50 py-2 text-center">
+          <p class="text-[10px] font-black text-pink-400">
+            RANGE
+          </p>
+
+          <p id="rangeText" class="text-lg font-black">
+            1 - 100
+          </p>
+        </div>
+
+        <div class="rounded-xl bg-purple-50 py-2 text-center">
+          <p class="text-[10px] font-black text-purple-400">
+            ATTEMPTS
+          </p>
+
+          <p id="attempts" class="text-lg font-black">
+            0
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Message -->
+      <div
+        id="message"
+        class="mt-3 rounded-xl bg-gray-100 px-3 py-3 text-center text-sm font-bold text-gray-600"
+      >
+        Okay Manjiri... prove you have a brain. 😭
+      </div>
+
+      <!-- Input -->
+      <div class="mt-3">
+
+        <label
+          for="guessInput"
+          class="text-xs font-bold text-gray-600"
+        >
+          Your guess, Einstein 🧑‍🔬
+        </label>
+
+        <input
+          id="guessInput"
+          type="number"
+          min="1"
+          max="100"
+          placeholder="Enter 1-100"
+          class="w-full mt-1 rounded-xl border-2 border-gray-200 px-3 py-2.5 text-center text-xl font-black outline-none focus:border-pink-400"
+        >
+
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex gap-2 mt-3">
+
+        <button
+          id="guessBtn"
+          class="flex-1 rounded-xl bg-gradient-to-r from-pink-500 to-rose-500 py-2.5 text-white font-black shadow-md hover:scale-[1.02] active:scale-95 transition"
+        >
+          GUESS 🎯
+        </button>
+
+        <button
+          id="resetBtn"
+          class="rounded-xl bg-gray-100 px-4 py-2.5 font-bold hover:bg-gray-200 active:scale-95 transition"
+        >
+          🔄
+        </button>
+
+      </div>
+
+      <!-- Hint -->
+      <p
+        id="hint"
+        class="text-center text-xs text-gray-500 mt-2"
+      >
+        💡 Somewhere between 1 and your limited intelligence.
+      </p>
+
+      <!-- Best Score -->
+      <div class="text-center mt-2">
+
+        <p class="text-[9px] font-bold uppercase tracking-widest text-gray-400">
+          Best Performance
+        </p>
+
+        <p
+          id="bestScore"
+          class="text-lg font-black text-pink-500"
+        >
+          -
+        </p>
+
+      </div>
+
+    </div>
+
+    <p class="text-center text-white/80 text-[10px] font-semibold mt-2">
+      Made with ❤️ for Manjiri
+    </p>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
